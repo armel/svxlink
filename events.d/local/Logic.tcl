@@ -33,6 +33,7 @@ namespace eval Logic {
 
 }
 
+puts "Hello, world"
 #
 # This file has not been truncated
 #
