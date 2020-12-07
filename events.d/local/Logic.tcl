@@ -8,7 +8,7 @@
 #
 namespace eval Logic {
 
-  source [file join [file dirname [info script]] LogicBeginRRF.tcl]
+  source [file join [file dirname [info script]] LogicBeginRRF.inc]
 
   #
   # Executed when a DTMF command has been received
@@ -22,18 +22,17 @@ namespace eval Logic {
 
   proc dtmf_cmd_received {cmd} {
 
-    source [file join [file dirname [info script]] LogicPluginRRF.tcl]
-    source [file join [file dirname [info script]] LogicAnalogicRRF.tcl]
-    source [file join [file dirname [info script]] LogicNumericRRF.tcl]
+    source [file join [file dirname [info script]] LogicPluginRRF.inc]
+    source [file join [file dirname [info script]] LogicAnalogicRRF.inc]
+    source [file join [file dirname [info script]] LogicNumericRRF.inc]
 
     return 0
   }
 
-  source [file join [file dirname [info script]] LogicEndRRF.tcl]
+  source [file join [file dirname [info script]] LogicEndRRF.inc]
 
 }
 
-puts "Hello, world"
 #
 # This file has not been truncated
 #
