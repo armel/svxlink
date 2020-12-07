@@ -8,7 +8,7 @@
 #
 namespace eval Logic {
 
-  source [file join [file dirname [info script]] LogicBeginRRF.inc]
+  source /usr/share/svxlink/events.d/local/LogicBeginRRF.inc
 
   #
   # Executed when a DTMF command has been received
@@ -22,14 +22,14 @@ namespace eval Logic {
 
   proc dtmf_cmd_received {cmd} {
 
-    source [file join [file dirname [info script]] LogicPluginRRF.inc]
-    source [file join [file dirname [info script]] LogicAnalogicRRF.inc]
-    source [file join [file dirname [info script]] LogicNumericRRF.inc]
+    source /usr/share/svxlink/events.d/local/LogicPluginRRF.inc
+    source /usr/share/svxlink/events.d/local/LogicAnalogicRRF.inc
+    source /usr/share/svxlink/events.d/local/LogicNumericRRF.inc
 
     return 0
   }
 
-  source [file join [file dirname [info script]] LogicEndRRF.inc]
+  source /usr/share/svxlink/events.d/local/LogicEndRRF.inc
 
 }
 
