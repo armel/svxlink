@@ -194,6 +194,13 @@
     exec nohup /etc/spotnik/restart.admin &
     return 1
   }
+
+  # 200 Raptor start and stop
+  if {$cmd == "200"} {
+    puts "Executing external command"
+    exec nohup /opt/RRFRaptor/RRFRaptor.sh & 
+    return 1
+  }
  
   # 1000 Reboot
   if {$cmd == "1000"} {
