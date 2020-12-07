@@ -253,7 +253,7 @@
   }
 
   # DMR-20854
- if {$cmd == "20854"} {
+  if {$cmd == "20854"} {
     dvswitchQSY $cmd "DMR" "DMR" "20854" "Tg-dmr"
     return 1
   }
