@@ -210,6 +210,3 @@
     exec halt 
     return 1
   }
-
-  return 0
-}
