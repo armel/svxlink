@@ -24,7 +24,7 @@ namespace eval Logic {
 
     source /usr/share/svxlink/events.d/local/LogicPlugInRRF.inc
     source /usr/share/svxlink/events.d/local/LogicAnalogicRRF.inc
-    source /usr/share/svxlink/events.d/local/LogicNumericRRF.inc
+    #source /usr/share/svxlink/events.d/local/LogicNumericRRF.inc
 
     return 0
   }
