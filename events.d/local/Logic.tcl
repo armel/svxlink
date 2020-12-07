@@ -8,28 +8,28 @@
 #
 namespace eval Logic {
 
-  source /usr/share/svxlink/events.d/local/LogicBeginRRF.inc
+source /usr/share/svxlink/events.d/local/LogicBeginRRF.inc
 
-  #
-  # Executed when a DTMF command has been received
-  #   cmd - The command
-  #
-  # Return 1 to hide the command from further processing is SvxLink or
-  # return 0 to make SvxLink continue processing as normal.
-  #
-  # This function can be used to implement your own custom commands or to disable
-  # DTMF commands that you do not want users to execute.
+#
+# Executed when a DTMF command has been received
+#   cmd - The command
+#
+# Return 1 to hide the command from further processing is SvxLink or
+# return 0 to make SvxLink continue processing as normal.
+#
+# This function can be used to implement your own custom commands or to disable
+# DTMF commands that you do not want users to execute.
 
-  proc dtmf_cmd_received {cmd} {
+proc dtmf_cmd_received {cmd} {
 
-    source /usr/share/svxlink/events.d/local/LogicPlugInRRF.inc
-    source /usr/share/svxlink/events.d/local/LogicAnalogicRRF.inc
-    #source /usr/share/svxlink/events.d/local/LogicNumericRRF.inc
+  source /usr/share/svxlink/events.d/local/LogicPlugInRRF.inc
+  source /usr/share/svxlink/events.d/local/LogicAnalogicRRF.inc
+  source /usr/share/svxlink/events.d/local/LogicNumericRRF.inc
 
-    return 0
-  }
+  return 0
+}
 
-  source /usr/share/svxlink/events.d/local/LogicEndRRF.inc
+source /usr/share/svxlink/events.d/local/LogicEndRRF.inc
 
 }
 
